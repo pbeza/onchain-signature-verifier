@@ -1,66 +1,15 @@
-## Foundry
-
-**Foundry is a blazing fast, portable and modular toolkit for Ethereum application development written in Rust.**
-
-Foundry consists of:
-
--   **Forge**: Ethereum testing framework (like Truffle, Hardhat and DappTools).
--   **Cast**: Swiss army knife for interacting with EVM smart contracts, sending transactions and getting chain data.
--   **Anvil**: Local Ethereum node, akin to Ganache, Hardhat Network.
--   **Chisel**: Fast, utilitarian, and verbose solidity REPL.
-
-## Documentation
-
-https://book.getfoundry.sh/
-
-## Usage
-
-### Build
-
-```shell
-$ forge build
-```
-
-### Test
+# onchain-signature-verifier
 
 ```shell
 $ forge test
+[⠊] Compiling...
+No files changed, compilation skipped
+
+Ran 1 test for test/VerifySignature.t.sol:VerifySignatureTest
+[PASS] testVerifySignature() (gas: 12292)
+Suite result: ok. 1 passed; 0 failed; 0 skipped; finished in 1.50ms (735.95µs CPU time)
+
+Ran 1 test suite in 21.55ms (1.50ms CPU time): 1 tests passed, 0 failed, 0 skipped (1 total tests)
 ```
 
-### Format
-
-```shell
-$ forge fmt
-```
-
-### Gas Snapshots
-
-```shell
-$ forge snapshot
-```
-
-### Anvil
-
-```shell
-$ anvil
-```
-
-### Deploy
-
-```shell
-$ forge script script/Counter.s.sol:CounterScript --rpc-url <your_rpc_url> --private-key <your_private_key>
-```
-
-### Cast
-
-```shell
-$ cast <subcommand>
-```
-
-### Help
-
-```shell
-$ forge --help
-$ anvil --help
-$ cast --help
-```
+To generate the signature that is hardcoded in the source code, see: https://github.com/pbeza/ethereum-signature-generator
